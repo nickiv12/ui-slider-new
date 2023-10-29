@@ -3,23 +3,8 @@
 
 # === Мой проект html ====
 # Библиотеки jQuery в папке js
-jquery-ui.js
-jquery-1.11.1.js
+#jquery-ui.js
+#jquery-1.11.1.js
 # --------------------------
 
-# Flask и с ним связанное
-venv
-*.pyc
-staticfiles
-.env
-db.sqlite3
-getting-started/*
 
-*.py[cod]
-__pycache__
-
-# SQLite databases
-*.sqlite
-
-# Virtual environment
-venv
