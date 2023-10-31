@@ -16,18 +16,62 @@
 		.slider {
 			width: 90%;
 			text-align: right;
+			background: red;
 		}
 		h3 {text-align: center}
 		
-		/* ==== МЕДИА ПРАВИЛА ==== */
-		@media only screen and (max-width: 20cm) {
-			/* Увеличиваем размер шрифта)	*/
-			.panel {
-				/*font-size: 18px; */
-				/* color: red; */
-			}
-        /*		padding-bottom: 16px; НЕ ИСПОЛЬЗОВАТЬ - не помогает увеличению активных элементов */
-      }
+		/* --- Настройки --- */
+		input[type="range"] {  
+			-webkit-appearance: none; /* Отключаем стандартный стиль браузера */
+			appearance: none;
+			width: 100%; /* Ширина полосы по всей длине элемента */
+			height: 10px; /* Высота полосы */
+			background: #red; /* Цвет полосы по умолчанию */
+			border-radius: 5px; /* Скругляем углы для полосы */
+	
+	/* Стилизуем полосу (track) */
+input[type="range"] {
+  -webkit-appearance: none; /* Отключаем стандартный стиль браузера */
+  appearance: none;
+  width: 100%; /* Ширина полосы по всей длине элемента */
+  height: 10px; /* Высота полосы */
+  background: #ccc; /* Цвет левой части полосы по умолчанию */
+  border-radius: 5px; /* Скругляем углы для полосы */
+  position: relative; /* Для псевдоэлементов */
+}
+
+/* Псевдоэлемент для стилизации левой части полосы */
+input[type="range"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Ширина левой части полосы */
+  height: 100%; /* Высота полосы */
+  background: #ccc; /* Цвет левой части полосы */
+  border-radius: 5px 0 0 5px; /* Скругляем углы для левой части полосы */
+}
+
+/* Стилизуем ползунок (thumb) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Отключаем стандартный стиль браузера */
+  appearance: none;
+  width: 20px; /* Ширина ползунка */
+  height: 20px; /* Высота ползунка */
+  background: #yellow; /* Цвет фона ползунка */
+  border-radius: 50%; /* Создаем круглый ползунок */
+  cursor: pointer; /* Изменяем курсор при наведении */
+}
+
+/* Задаем цвет ползунка и правой части полосы при наведении */
+input[type="range"]:hover {
+  background: #ddd; /* Новый цвет правой части полосы при наведении */
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #217dbb; /* Новый цвет ползунка при наведении */
+}
+	
 	</style>
 </head>
 
@@ -35,6 +79,7 @@
 	<div class="panel">
 		<h3>Проба использования слайдера сделанного на теге input: type="range"<h3>
 		<input type="range" class="slider" id="var-01"  min="0" max="100" value="10">
+		<input type="range" id="myRange">
 	</div>
 
 </body>
@@ -46,5 +91,17 @@
 
 	console.log("Ширина экрана: " + screenWidth + " пикселей");
 	console.log("Высота экрана: " + screenHeight + " пикселей");
+	
+// Получение значения ползунка value при перемещении.
+	let rangeInput = document.getElementById('var-01');  // Получаем доступ к слайдеру
+	rangeInput.addEventListener('input', function() {
+		/* Функция получает значение value при каждом перемещении
+			ползунка слайдера и передает его css-свойству 
+		*/
+		let value = rangeInput.value;  // 
+		console.log("Текущее значение value: " + value);
+		
+	});
+
 </script>
 </html>
