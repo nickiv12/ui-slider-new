@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- перед charset ОБЯЗАТЕЛЬНО точку с запятой, иначе IE не распознает кодировку -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="OlegTripolskiy" />
+	<title>Demo CSS-sprite</title>
+	<style>
+		.container {
+			width: 670 px;
+			height: 385px;
+			border: 2px solid red;
+			background-image: url('img/sprite01.png');
+			/*background-position: center;  Позиция изображения */
+  			background-repeat: no-repeat;
+  			opacity: 0.5;
+  			}
+		.opacity07 {
+			height: 160px;
+			width: 400;
+			border: 2px solid blue;
+			/*background-color: blue; */
+
+		}
+	</style>
+</head>
+<body>
+<!-- ПРОБА сделать демонстрацию CSS-sprite.
+	 Показать видимость части полупрозрачного спрайта в прозрачном окне
+-->
+	<h4>Проба демонстрации принципа работы CSS-спрайта.</h4>
+	<div class="container">
+		<div class="opacity07"><div>
+	</div>
+
+
+</body>
+</html>
