@@ -6,23 +6,24 @@
 		#panel {
 			width: 90%;
 			margin: auto;
+			position: relativ;
 			border: 2px solid black;
 			}
 		.container {
 			height: 400px;
 			border: 2px solid red;
 			background-image: url('img/sprite01.png');
-			background-position: 500px 203px;  /*Позиция изображения */
+			background-position: 400px 203px;  /*Позиция изображения */
   			background-repeat: no-repeat;
   			opacity: 0.3;
   		}
 		.demo {
+			position: absolute;
+			left: 400px;
+			top: 200px;
 			height: 66px;
 			width: 66px;
 			border: 3px solid blue;
-			position: relative;
-			top: -200px;
-			left: 500px;
 			background-image: url('img/sprite01.png');
   			background-repeat: no-repeat;
   			background-position: 0 0;  /*Позиция изображения */
@@ -38,10 +39,10 @@
 <!-- ПРОБА сделать демонстрацию CSS-sprite.
 	 Показать видимость части полупрозрачного спрайта в прозрачном окне-->
 
-	<h4>Проба демонстрации принципа работы CSS-спрайта. 123</h4>
+	<h4>Проба демонстрации принципа работы CSS-спрайта. 1234</h4>
 	<div id="panel">
+		<div class="demo"></div>
 		<div class="container">Контейненр</div>
-		<div class="demo"></div>  <!-- Чтобы был виден должен быть после contanener или z-index -->
 
 	</div>
 </body>
