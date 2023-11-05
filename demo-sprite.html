@@ -2,21 +2,19 @@
 <html>
 <head>
 	<!-- перед charset ОБЯЗАТЕЛЬНО точку с запятой, иначе IE не распознает кодировку -->
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<meta name=viewport content="width=device-width, initial-scale=1"> <!--  -->
-	<meta name="author" content="OlegTripolskiy" />
-	<title>Demo CSS-sprite</title>
 	<style>
-		.container {
-			margin: auto;
+		#panel {
 			width: 90%;
+			margin: auto;
+			}
+		.container {
 			height: 400px;
 			border: 2px solid red;
 			background-image: url('img/sprite01.png');
 			background-position: 500px 203px;  /*Позиция изображения */
   			background-repeat: no-repeat;
   			opacity: 0.3;
-  			}
+  		}
 		.demo {
 			height: 66px;
 			width: 66px;
@@ -29,14 +27,19 @@
   			background-position: 0 0;  /*Позиция изображения */
 		}
 	</style>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name=viewport content="width=device-width, initial-scale=1"> <!--  -->
+	<meta name="author" content="OlegTripolskiy" />
+	<title>Demo CSS-sprite</title>
 </head>
 <body>
 <!-- ПРОБА сделать демонстрацию CSS-sprite.
-	 Показать видимость части полупрозрачного спрайта в прозрачном окне
--->
-	<h4>Проба демонстрации принципа работы CSS-спрайта. 1</h4>
-	<div class="container">Контейненр</div>
-	<div class="demo"><div>
+	 Показать видимость части полупрозрачного спрайта в прозрачном окне-->
 
+	<h4>Проба демонстрации принципа работы CSS-спрайта. 12</h4>
+	<div id="panel">
+		<div class="container">Контейненр</div>
+		<div class="demo"></div>
+	</div>
 </body>
 </html>
