@@ -6,6 +6,7 @@
 		#panel {
 			width: 90%;
 			margin: auto;
+			border: 2px solid black;
 			}
 		.container {
 			height: 400px;
@@ -25,6 +26,7 @@
 			background-image: url('img/sprite01.png');
   			background-repeat: no-repeat;
   			background-position: 0 0;  /*Позиция изображения */
+  			z-index: 99;
 		}
 	</style>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -39,7 +41,8 @@
 	<h4>Проба демонстрации принципа работы CSS-спрайта. 12</h4>
 	<div id="panel">
 		<div class="container">Контейненр</div>
-		<div class="demo"></div>
+		<div class="demo"></div>  <!-- Чтобы был виден должен быть после contanener или z-index -->
+
 	</div>
 </body>
 </html>
